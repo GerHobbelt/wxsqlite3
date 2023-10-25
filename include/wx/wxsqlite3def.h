@@ -46,6 +46,24 @@
 
 <dl>
 
+<dt><b>4.9.5</b> - <i>September 2023</i></dt>
+<dd>
+Upgrade to <i>SQLite3 Multiple Ciphers version 1.6.5 (SQLite version 3.43.1)</i><br>
+
+</dd>
+
+<dt><b>4.9.4</b> - <i>May 2023</i></dt>
+<dd>
+Upgrade to <i>SQLite3 Multiple Ciphers version 1.6.3 (SQLite version 3.42.0)</i><br>
+
+</dd>
+
+<dt><b>4.9.3</b> - <i>March 2023</i></dt>
+<dd>
+Upgrade to <i>SQLite3 Multiple Ciphers version 1.6.1 (SQLite version 3.41.1)</i><br>
+
+</dd>
+
 <dt><b>4.9.2</b> - <i>February 2023</i></dt>
 <dd>
 Upgrade to <i>SQLite3 Multiple Ciphers version 1.6.0 (SQLite version 3.41.0)</i><br>

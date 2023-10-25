@@ -2684,7 +2684,7 @@ void wxSQLite3Database::Open(const wxString& fileName, const wxMemoryBuffer& key
   wxCharBuffer strFileName = fileName.ToUTF8();
   const char* localFileName = strFileName;
   wxCharBuffer strVfs = vfs.ToUTF8();
-  const char* localVfs = (!vfs.IsEmpty()) ? strVfs : (const char* ) NULL;
+  const char* localVfs = (!vfs.IsEmpty()) ? (const char*) strVfs : (const char*) NULL;
   sqlite3* db;
 
   int rc = sqlite3_open_v2((const char*) localFileName, &db, flags, localVfs);
@@ -2747,7 +2747,7 @@ void wxSQLite3Database::Open(const wxString& fileName, const wxSQLite3Cipher& ci
   wxCharBuffer strFileName = fileName.ToUTF8();
   const char* localFileName = strFileName;
   wxCharBuffer strVfs = vfs.ToUTF8();
-  const char* localVfs = (!vfs.IsEmpty()) ? strVfs : (const char*) NULL;
+  const char* localVfs = (!vfs.IsEmpty()) ? (const char*) strVfs : (const char*) NULL;
   sqlite3* db;
 
   int rc = sqlite3_open_v2((const char*) localFileName, &db, flags, localVfs);
@@ -5725,7 +5725,8 @@ wxSQLite3Cipher::GetCipherType(const wxString& cipherName)
 bool
 wxSQLite3Cipher::SetCipher(wxSQLite3Database& db, wxSQLite3CipherType cipherType)
 {
-  const char* cipherName = GetCipherName(cipherType).utf8_str();
+  wxCharBuffer strCipherName = GetCipherName(cipherType).utf8_str();
+  const char* cipherName = strCipherName;
   sqlite3* dbHandle = (sqlite3*) GetDatabaseHandle(db);
   int newCipherType = (dbHandle != NULL) ? sqlite3mc_config(dbHandle, "cipher", sqlite3mc_cipher_index(cipherName)) : WXSQLITE_CIPHER_UNKNOWN;
   return (newCipherType > 0 && newCipherType == (int) cipherType && newCipherType != WXSQLITE_CIPHER_UNKNOWN);
@@ -5734,7 +5735,8 @@ wxSQLite3Cipher::SetCipher(wxSQLite3Database& db, wxSQLite3CipherType cipherType
 bool
 wxSQLite3Cipher::SetCipherDefault(wxSQLite3Database& db, wxSQLite3CipherType cipherType)
 {
-  const char* cipherName = GetCipherName(cipherType).utf8_str();
+  wxCharBuffer strCipherName = GetCipherName(cipherType).utf8_str();
+  const char* cipherName = strCipherName;
   sqlite3* dbHandle = (sqlite3*) GetDatabaseHandle(db);
   int newCipherType = (dbHandle != NULL) ? sqlite3mc_config(dbHandle, "default:cipher", sqlite3mc_cipher_index(cipherName)) : WXSQLITE_CIPHER_UNKNOWN;
   return (newCipherType > 0 && newCipherType == (int) cipherType && newCipherType != WXSQLITE_CIPHER_UNKNOWN);
