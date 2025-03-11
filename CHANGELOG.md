@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.10.5] - 2025-03-04
+
+  - Upgrade to SQLite3 Multiple Ciphers version 2.1.0 (SQLite version 3.49.1)
+  - Disable AEGIS cipher scheme when compiling with MSVC 2015 or below
+
+## [4.10.4] - 2025-02-21
+
+  - Upgrade to SQLite3 Multiple Ciphers version 2.0.4 (SQLite version 3.49.1)
+
+## [4.10.3] - 2025-02-10
+
+  - Upgrade to SQLite3 Multiple Ciphers version 2.0.3 (SQLite version 3.49.0)
+
 ## [4.10.2] - 2025-01-16
 
   - Upgrade to SQLite3 Multiple Ciphers version 2.0.2 (SQLite version 3.48.0)
@@ -658,7 +671,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First public release
 
-[Unreleased]: ../../compare/v4.10.2...HEAD
+[Unreleased]: ../../compare/v4.10.5...HEAD
+[4.10.5]: ../../compare/v4.10.4...v4.10.5
+[4.10.4]: ../../compare/v4.10.3...v4.10.4
+[4.10.3]: ../../compare/v4.10.2...v4.10.3
 [4.10.2]: ../../compare/v4.10.1...v4.10.2
 [4.10.1]: ../../compare/v4.10.0...v4.10.1
 [4.10.0]: ../../compare/v4.9.12...v4.10.0
