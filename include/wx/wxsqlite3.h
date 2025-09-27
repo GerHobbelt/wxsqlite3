@@ -2249,7 +2249,7 @@ public:
   */
   int GetParamIndex(const wxString& paramName) const;
 
-  /// Get the name of a paramater at the given position
+  /// Get the name of a parameter at the given position
   /**
   * \param paramIndex index of the parameter. The first parameter has an index of 1.
   * \return the name of the paramIndex-th parameter in the precompiled statement.
