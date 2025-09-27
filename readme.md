@@ -52,11 +52,9 @@ Currently the _CMake_ support is experimental and limited to Windows platforms (
 
 ## <a name="history"></a>Version history
 
-* 4.10.6 - *May 2025*
+* 4.10.12 - *August 2025*
 
-  - Add method wxSQLite3Database::Configure()<br>
-  - Add missing wxSQLite3Database::Restore() method variant
-  - Fix mapping between cipher ids and cipher names<br>
+  - Upgrade to SQLite3 Multiple Ciphers version 2.2.4 (SQLite version 3.50.4)
 
 For further version information please consult the [CHANGELOG](CHANGELOG.md).
 
